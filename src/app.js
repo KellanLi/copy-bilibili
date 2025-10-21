@@ -1,12 +1,12 @@
 import Header from "./part/header/index.js";
 import Recommend from "./part/recommend/index.js";
-import VideoCardList from "./part/video-card-list/index.js";
+import VideoCardContainer from "./part/video-card-container/index.js";
 
 export default {
   components: {
     Header,
     Recommend,
-    VideoCardList,
+    VideoCardContainer,
   },
   setup() {
     return {};
@@ -15,7 +15,7 @@ export default {
     <div>
       <Header />
       <Recommend />
-      <VideoCardList />
+      <VideoCardContainer />
     </div>
   `,
 };

@@ -1,3 +1,10 @@
 #app {
   min-width: 1060px;
 }
+
+.bili-video-card__stats--icon {
+  margin-right: 2px;
+  width: var(--icon-size);
+  height: var(--icon-size);
+  color: #fff;
+}
