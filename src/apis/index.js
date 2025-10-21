@@ -48,3 +48,50 @@ export const getVideoList = ({ page = 1, pageSize = 10 }) => {
     }, 1000);
   });
 };
+
+const channelListExampleData = [
+  {
+    id: 1,
+    type: 1,
+    title: "《小猪佩奇 第十一季》中文配音版",
+    cover: "/src/assets/cover3.png",
+    playCount: 7827000,
+    uploader: "动画纪",
+  },
+  {
+    id: 2,
+    type: 2,
+    title: "天官赐福 第二季",
+    cover: "/src/assets/cover4.png",
+    playCount: 2704000,
+    uploader: "天官赐福动画官方",
+  },
+];
+
+export const getChannelList = ({ page = 1, pageSize = 10 }) => {
+  return new Promise((resolve) => {
+    const list = Array(pageSize)
+      .fill(null)
+      .map(() => {
+        const index = Math.floor(Math.random() * channelListExampleData.length);
+        return {
+          ...channelListExampleData[index],
+          id: crypto.randomUUID(),
+        };
+      });
+
+    console.log(`生成${pageSize}条数据：`, list);
+
+    const response = {
+      code: 0,
+      message: "success",
+      data: {
+        list,
+      },
+    };
+
+    setTimeout(() => {
+      resolve(response);
+    }, 1000);
+  });
+};

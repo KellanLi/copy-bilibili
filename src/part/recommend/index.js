@@ -1,4 +1,5 @@
 export default {
+  name: "Recommend",
   setup() {
     return {};
   },

@@ -3,6 +3,7 @@ import { getVideoList } from "../../apis/index.js";
 import VideoCardList from "../../components/video-card-list/index.js";
 
 export default {
+  name: "VideoCardContainer",
   components: {
     VideoCardList,
   },
