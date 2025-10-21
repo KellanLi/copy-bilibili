@@ -22,7 +22,7 @@ const styles = {
   info: {
     display: "flex",
     position: "absolute",
-    bottom: "5px",
+    bottom: "10px",
     left: 0,
     right: 0,
     fontSize: "14px",
