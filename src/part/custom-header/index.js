@@ -1,5 +1,5 @@
 export default {
-  name: "Header",
+  name: "CustomHeader",
   setup() {
     return {};
   },

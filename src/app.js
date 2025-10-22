@@ -1,10 +1,10 @@
-import Header from "./part/header/index.js";
+import CustomHeader from "./part/custom-header/index.js";
 import Recommend from "./part/recommend/index.js";
 import VideoCardContainer from "./part/video-card-container/index.js";
 
 export default {
   components: {
-    Header,
+    CustomHeader,
     Recommend,
     VideoCardContainer,
   },
@@ -13,9 +13,9 @@ export default {
   },
   template: /*html*/ `
     <div>
-      <Header />
-      <Recommend />
-      <VideoCardContainer />
+      <custom-header />
+      <recommend />
+      <video-card-container />
     </div>
   `,
 };

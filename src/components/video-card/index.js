@@ -1,3 +1,5 @@
+import { transCountToString } from "../../utils/index.js";
+
 import {
   BulletScreenIcon,
   VideoIcon,
@@ -8,6 +10,7 @@ const styles = {
   videoCard: {
     display: "flex",
     flexDirection: "column",
+    paddingBottom: "16px",
   },
   coverContainer: {
     width: "100%",
@@ -48,6 +51,7 @@ const styles = {
 };
 
 export default {
+  name: "VideoCard",
   components: {
     BulletScreenIcon,
     VideoIcon,
@@ -87,6 +91,7 @@ export default {
     return {
       ...props,
       styles,
+      transCountToString,
     };
   },
   template: /*html*/ `
@@ -94,14 +99,14 @@ export default {
       <div :style="styles.coverContainer">
         <img :src="cover" :alt="title" :style="styles.cover" />
         <div :style="styles.info">
-          <div :style="styles.infoItem"><VideoIcon /> {{ playCount }}</div>
-          <div :style="styles.infoItem"><BulletScreen /> {{ commentCount }}</div>
+          <div :style="styles.infoItem"><video-icon /> {{ transCountToString(playCount) }}</div>
+          <div :style="styles.infoItem"><bullet-screen-icon /> {{ commentCount }}</div>
           <div :style="styles.infoItem" style="margin-left: auto">{{ duration }}</div>
         </div>
       </div>
       <div :style="styles.title">{{ title }}</div>
       <div :style="styles.footer">
-        <UpIcon />
+        <up-icon />
         <div>{{ uploader }}·{{ publishTime }}</div>
       </div>
     </div>
