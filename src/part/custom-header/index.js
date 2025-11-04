@@ -1,17 +1,22 @@
+const styles = {
+  customHeader: {
+    position: "relative",
+  },
+  bgImg: {
+    width: "100%",
+  },
+};
+
 export default {
   name: "CustomHeader",
   setup() {
-    return {};
+    return {
+      styles,
+    };
   },
   template: /*html*/ `
-    <div class="header">
-      <div class="header-left">
-        <img src="https://www.bilibili.com/favicon.ico" alt="bilibili" />
-        <span>哔哩哔哩 (゜-゜)つロ 干杯~-bilibili</span>
-      </div>
-      <div class="header-right">
-        <a href="https://www.bilibili.com/">哔哩哔哩</a>
-      </div>
+    <div :style="styles.customHeader">
+      <img src="/src/assets/header-bg.png" :style="styles.bgImg" />
     </div>
   `,
 };
